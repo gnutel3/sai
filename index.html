@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple Store – Магазин техники Apple</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Стили должны быть в head -->
+    <link rel="stylesheet" href="style.css?v=1.0">
 </head>
 <body>
 
@@ -24,10 +25,9 @@
 <section id="home" class="section">
     <h1>Добро пожаловать в Apple Store</h1>
     <p class="text">
-        Мы предлагаем только оригинальную технику Apple: iPhone, iPad, MacBook,
-        Apple Watch и аксессуары. Наш магазин гарантирует качество, проверку 
-        устройства перед продажей и официальную гарантию. Мы работаем напрямую 
-        с поставщиками, что позволяет держать цены ниже, чем у конкурентов.
+        Мы предлагаем оригинальную технику Apple: iPhone, iPad, MacBook,
+        Apple Watch и аксессуары. Наша миссия — обеспечить покупателей 
+        качественными устройствами и сервисом высокого уровня.
     </p>
 </section>
 
@@ -35,9 +35,8 @@
 <section id="about" class="section">
     <h2>О нас</h2>
     <p class="text">
-        Наш магазин работает более пяти лет и специализируется исключительно
-        на технике Apple. Мы предоставляем консультации, быструю доставку,
-        а также сервисное обслуживание на профессиональном уровне.
+        Мы работаем более пяти лет и специализируемся исключительно на технике Apple.
+        Каждое устройство проходит проверку перед продажей.
     </p>
 </section>
 
@@ -83,10 +82,11 @@
     <p id="formStatus"></p>
 </section>
 
-<!-- Футер -->
 <footer>
     <p>© 2025 Apple Store. Все права защищены.</p>
 </footer>
 
+<!-- JS должен быть ПЕРЕД </body> -->
+<script src="script.js?v=1.0"></script>
 </body>
 </html>
