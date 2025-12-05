@@ -9,7 +9,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(link => {
     });
 });
 
-// Валидация формы
+// Обработка формы
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -20,13 +20,13 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         return;
     }
 
-    document.getElementById("formStatus").textContent = "Сообщение отправлено!";
+    document.getElementById("formStatus").textContent = "Сообщение успешно отправлено!";
     this.reset();
 });
 
-// Кнопки купить
-document.querySelectorAll(".buy-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        alert("Спасибо за покупку! С вами свяжется менеджер.");
+// Кнопка купить
+document.querySelectorAll(".buy-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        alert("Спасибо за покупку! Наш менеджер скоро свяжется с вами.");
     });
 });
