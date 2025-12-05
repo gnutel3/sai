@@ -1,94 +1,144 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Store – Магазин техники Apple</title>
+/* Общий стиль */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #fafafa;
+    color: #333;
+}
 
-    <!-- Подключение стилей -->
-    <link rel="stylesheet" href="style.css?v=1.1">
-</head>
-<body>
+.section {
+    padding: 120px 20px 70px;
+    text-align: center;
+}
 
-<!-- Навигация -->
-<nav id="navbar">
-    <div class="nav-container">
-        <div class="logo">Apple Store</div>
-        <ul class="nav-links">
-            <li><a href="#home">Главная</a></li>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#products">Каталог</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
-    </div>
-</nav>
+.text {
+    max-width: 750px;
+    margin: auto;
+    font-size: 18px;
+}
 
-<!-- Главная -->
-<section id="home" class="section">
-    <h1>Добро пожаловать в Apple Store</h1>
-    <p class="text">
-        Мы предлагаем оригинальную технику Apple: iPhone, iPad, MacBook,
-        Apple Watch и аксессуары. Все устройства проходят тщательную проверку,
-        а наша команда поможет выбрать подходящую модель.
-    </p>
-</section>
+/* НАВИГАЦИЯ */
+nav {
+    background: #fff;
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    z-index: 999;
+}
 
-<!-- О нас -->
-<section id="about" class="section">
-    <h2>О нас</h2>
-    <p class="text">
-        Мы работаем более пяти лет и специализируемся исключительно на технике Apple.
-        Предоставляем поддержку, гарантию и консультации.
-    </p>
-</section>
+.nav-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-<!-- Каталог -->
-<section id="products" class="section">
-    <h2>Каталог техники Apple</h2>
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
 
-    <div class="product-grid">
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        <div class="product-card">
-            <img src="https://store.storeimages.cdn-apple.com/1/iPhone15.jpg" alt="iPhone 15 Pro">
-            <h3>iPhone 15 Pro 256GB</h3>
-            <p class="price">119 990 ₽</p>
-            <button class="buy-btn">Купить</button>
-        </div>
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+}
 
-        <div class="product-card">
-            <img src="https://store.storeimages.cdn-apple.com/1/Macbook.jpg" alt="MacBook Air M2">
-            <h3>MacBook Air 13&quot; M2</h3>
-            <p class="price">104 990 ₽</p>
-            <button class="buy-btn">Купить</button>
-        </div>
+.nav-links a:hover {
+    color: #777;
+}
 
-        <div class="product-card">
-            <img src="https://store.storeimages.cdn-apple.com/1/iPad.jpg" alt="iPad Pro">
-            <h3>iPad Pro 11&quot; M2</h3>
-            <p class="price">89 990 ₽</p>
-            <button class="buy-btn">Купить</button>
-        </div>
+/* КАТАЛОГ */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
 
-    </div>
-</section>
+.product-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.25s;
+}
 
-<!-- Контакты -->
-<section id="contact" class="section">
-    <h2>Связаться с нами</h2>
-    <form id="contactForm">
-        <input type="text" id="name" placeholder="Имя" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <textarea id="message" placeholder="Ваше сообщение" required></textarea>
-        <button type="submit">Отправить</button>
-    </form>
-    <p id="formStatus"></p>
-</section>
+.product-card:hover {
+    transform: translateY(-5px);
+}
 
-<footer>
-    <p>© 2025 Apple Store. Все права защищены.</p>
-</footer>
+.product-card img {
+    width: 100%;
+    border-radius: 12px;
+}
 
-<!-- Подключение скриптов -->
-<script src="script.js?v=1.1"></script>
-</body>
-</html>
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.buy-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buy-btn:hover {
+    background: #333;
+}
+
+/* Форма */
+form {
+    max-width: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background: black;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #333;
+}
+
+/* Футер */
+footer {
+    background: #111;
+    color: white;
+    padding: 18px;
+    margin-top: 50px;
+}
