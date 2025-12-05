@@ -1,9 +1,11 @@
 // Плавная прокрутка
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function(e) {
+document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
         e.preventDefault();
         const id = this.getAttribute("href");
-        document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+        document.querySelector(id).scrollIntoView({
+            behavior: "smooth"
+        });
     });
 });
 
@@ -18,6 +20,13 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         return;
     }
 
-    document.getElementById("formStatus").textContent = "Сообщение успешно отправлено!";
+    document.getElementById("formStatus").textContent = "Сообщение отправлено!";
     this.reset();
+});
+
+// Кнопки купить
+document.querySelectorAll(".buy-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        alert("Спасибо за покупку! С вами свяжется менеджер.");
+    });
 });
