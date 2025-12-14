@@ -3,92 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Store – Магазин техники Apple</title>
-
-    <!-- Подключение стилей -->
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <title>Apple Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Навигация -->
-<nav id="navbar">
-    <div class="nav-container">
-        <div class="logo">Apple Store</div>
-        <ul class="nav-links">
-            <li><a href="#home">Главная</a></li>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#products">Каталог</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
-    </div>
+<!-- НАВИГАЦИЯ -->
+<nav class="navbar">
+    <ul class="nav-menu">
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#products">Каталог</a></li>
+        <li><a href="#contact">Контакты</a></li>
+    </ul>
 </nav>
 
-<!-- Главная -->
-<section id="home" class="section">
-    <h1>Добро пожаловать в Apple Store</h1>
-    <p class="text">
-        Мы предлагаем оригинальную технику Apple: iPhone, iPad, MacBook,
-        Apple Watch и аксессуары. Все устройства проходят тщательную проверку,
-        а наша команда поможет выбрать подходящую модель.
+<!-- ГЛАВНАЯ -->
+<section id="home" class="section hero">
+    <h1>Apple Store</h1>
+    <p>
+        Магазин оригинальной техники Apple. iPhone, iPad, MacBook и аксессуары.
+        Мы гарантируем качество, честные цены и профессиональную консультацию
+        перед покупкой. Работаем напрямую с проверенными поставщиками.
     </p>
 </section>
 
-<!-- О нас -->
+<!-- О НАС -->
 <section id="about" class="section">
-    <h2>О нас</h2>
-    <p class="text">
-        Мы работаем более пяти лет и специализируемся исключительно на технике Apple.
-        Предоставляем поддержку, гарантию и консультации.
+    <h2>О магазине</h2>
+    <p>
+        Apple Store — это команда специалистов с опытом более 5 лет.
+        Мы помогаем подобрать технику под ваши задачи и сопровождаем клиента
+        на всех этапах покупки.
     </p>
 </section>
 
-<!-- Каталог -->
+<!-- ГАЛЕРЕЯ -->
+<section id="gallery" class="section">
+    <h2>Техника Apple</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="">
+        <img src="https://images.unsplash.com/photo-1512499617640-c2f999098c01" alt="">
+        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef" alt="">
+    </div>
+</section>
+
+<!-- КАТАЛОГ -->
 <section id="products" class="section">
-    <h2>Каталог техники Apple</h2>
+    <h2>Каталог</h2>
 
     <div class="product-grid">
-
         <div class="product-card">
-            <img src="image/orig.jpg" alt="iPhone 15 Pro">
             <h3>iPhone 15 Pro 256GB</h3>
             <p class="price">119 990 ₽</p>
             <button class="buy-btn">Купить</button>
         </div>
 
         <div class="product-card">
-            <img src="image/s-l1600.jpg" alt="MacBook Air M2">
-            <h3>MacBook Air 13&quot; M2</h3>
+            <h3>MacBook Air 13″ M2</h3>
             <p class="price">104 990 ₽</p>
             <button class="buy-btn">Купить</button>
         </div>
 
         <div class="product-card">
-            <img src="image/дд4.jpg" alt="iPad Pro">
-            <h3>iPad Pro 11&quot; M2</h3>
+            <h3>iPad Pro 11″ M2</h3>
             <p class="price">89 990 ₽</p>
             <button class="buy-btn">Купить</button>
         </div>
-
     </div>
 </section>
 
-<!-- Контакты -->
+<!-- КОНТАКТЫ -->
 <section id="contact" class="section">
     <h2>Связаться с нами</h2>
-    <form id="contactForm">
-        <input type="text" id="name" placeholder="Имя" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <textarea id="message" placeholder="Ваше сообщение" required></textarea>
-        <button type="submit">Отправить</button>
-    </form>
-    <p id="formStatus"></p>
+    <p>
+        Телефон: <a href="tel:+79990000000">+7 (999) 000-00-00</a><br>
+        Email: <a href="mailto:info@applestore.ru">info@applestore.ru</a>
+    </p>
 </section>
 
-<footer>
-    <p>© 2025 Apple Store. Все права защищены.</p>
+<!-- ФУТЕР -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>© 2025 Apple Store. Все права защищены.</p>
+
+        <div class="socials">
+            <a href="#" aria-label="VK">VK</a>
+            <a href="#" aria-label="Telegram">TG</a>
+            <a href="#" aria-label="Instagram">IG</a>
+        </div>
+    </div>
 </footer>
 
-<!-- Подключение скриптов -->
-<script src="script.js?v=1.1"></script>
+<script src="script.js"></script>
 </body>
 </html>
